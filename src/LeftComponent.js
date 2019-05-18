@@ -10,7 +10,7 @@ import AdditionalControls from './AdditionalControls';
 export default class LeftComponent extends React.Component{
   render(){
     return(
-      <div>
+      <div className="left-padded">
         {/* <Logo/> */}
         <Navbar/>
         <AdditionalControls/>

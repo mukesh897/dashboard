@@ -9,11 +9,15 @@ import Inventory from './inventory';
 
 
 
-export default class LeftComponent extends React.Component{
+
+export default class CentreComponent extends React.Component{
   render(){
     return(
-      <div>
-        {/* <Search/> */}
+      <div className="all-padded">
+
+
+
+
         <Info/>
         <Inventory/>
 
