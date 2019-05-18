@@ -6,7 +6,9 @@
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
     "react": "^16.8.6",
+    "react-canvas-js": "^1.0.1",
     "react-dom": "^16.8.6",
+    "react-linechart": "^1.1.12",
     "react-scripts": "3.0.1"
   },
   "scripts": {
