@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.rounded-edges-button {
+	border: 1.08px solid #FFA900;	border-radius: 11.32px;	background-color: rgba(255,169,0,0.1);
+}
+
+.text-vertical-center {
+  vertical-align: middle;
+}
+
+.white-text {
+  colo: white;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -32,7 +44,7 @@
   }
 }
 
-.background {	height: 1080.66px;	width: 1443.74px;	background-color: #F2F6FA;}
+.background {	height: 1080.66px;	width: 1443.74px;		background: linear-gradient(180deg, #077DFC 0%, #0772E6 100%);}
 
 .container {	height: 36.39px;	width: 135.86px;}
 
@@ -40,6 +52,10 @@
 
 .all-padded {
   padding: 50px 50px 50px 50px;
+}
+
+.all-side-padded {
+  padding: 10px 10px 10px 10px;
 }
 
 .left-padded {
@@ -61,6 +77,10 @@
 .extra-top-bottom-padded {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.img-padded{
+   padding-right: 4px;
 }
 
 .header {

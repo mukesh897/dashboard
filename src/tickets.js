@@ -43,9 +43,11 @@ import App from './App.css'
 export default class Tickets extends React.Component{
   render(){
     return(
-      <div className="right-padded">
+      <div>
         <div>
           <Card >
+            <h5 align="left">Pending tickets </h5>
+            <p align="left">27 unresolved issues</p>
             <List dense>
           {[0, 1, 2, 3].map(value => (
             <ListItem key={value} button>
@@ -55,7 +57,8 @@ export default class Tickets extends React.Component{
                   src={require(`./assets/${value + 1}.jpg`)}
                 />
               </ListItemAvatar>
-              <ListItemText primary={`Line item ${value + 1}`} />
+              <ListItemText primary={`Line item ${value + 1}`}
+              secondary="secondary text"/>
             </ListItem>
           ))}
         </List>

@@ -15,26 +15,26 @@ export default class Navbar extends React.Component{
   render(){
     return(
 
-      <div className="extra-top-bottom-padded">
-          <div className="container" align="left">
-            <Button color="primary" variant="outlined">
-              <img src={dashboard} />
+      <div className="extra-top-bottom-padded" style={{color: "white"}}>
+          <div className="container" align="left" >
+            <Button style={{color: "white"}} color="primary" variant="outlined">
+              <img src={dashboard} className="img-padded" />
               Dashboard
             </Button>
           </div>
-          <div className="container" align="left">
-            <Button color="primary" variant="outlined">
-              <img src={creditcard} /> Tickets
+          <div className="container" align="left" >
+            <Button style={{color: "white"}} color="primary" variant="outlined">
+              <img src={creditcard} className="img-padded"/> Tickets
             </Button>
         </div>
           <div className="container" align="left">
-            <Button color="primary" variant="outlined">
-              <img src={inven} /> Inventory
+            <Button style={{color: "white"}} color="primary" variant="outlined">
+              <img src={inven} className="img-padded"/> Inventory
             </Button>
           </div>
           <div className="container" align="left">
-            <Button color="primary" variant="outlined">
-              <img src = {user} /> User
+            <Button style={{color: "white"}} color="primary" variant="outlined">
+              <img src = {user} className="img-padded"/> User
           </Button>
           </div>
       </div>

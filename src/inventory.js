@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import logo from './assets/logo_mark.svg';
+import { Progress } from 'reactstrap';
 
 import App from './App.css'
 
@@ -47,40 +48,57 @@ export default class Inventory extends React.Component{
 
   render(){
     return(
-      <div>
-      <div>
-        <h2>Inventory overview</h2>
-        <p>Get a bird's eye view of your inventory's activities</p>
+      <div >
+      <div >
+        <h2 style={{color: "white"}}>Inventory overview</h2>
+        <p style={{color: "white"}}>Get a bird's eye view of your inventory's activities</p>
       </div>
 
+
       <div>
-        <Paper className="root">
-      <Table className="table">
+        <Card color='primary'>
+          <h6 align="left" color="gray" className="left-padded">Total Items in Inventory</h6>
+          <h2></h2>
+        {/* <Paper className="root"> */}
+          <Progress multi>
+            <Progress bar value="15" >Laptop</Progress>
+            <Progress bar color="success" value="20" >Mouse</Progress>
+            <Progress bar color="info" value="25" >Keyboard</Progress>
+            <Progress bar color="warning" value="20" >Charger</Progress>
+            <Progress bar color="danger" value="15" >Display</Progress>
+          </Progress>
+
+      <Table className="table all-side-padded" >
         <TableHead>
+
+
           <TableRow>
-            <CustomTableCell>Dessert (100g serving)</CustomTableCell>
-            <CustomTableCell align="right">Calories</CustomTableCell>
-            <CustomTableCell align="right">Fat (g)</CustomTableCell>
-            <CustomTableCell align="right">Carbs (g)</CustomTableCell>
-            <CustomTableCell align="right">Protein (g)</CustomTableCell>
+            <CustomTableCell >Item Id</CustomTableCell>
+            <CustomTableCell >Name</CustomTableCell>
+            <CustomTableCell >Quantity</CustomTableCell>
+            <CustomTableCell >Type</CustomTableCell>
+            <CustomTableCell> Days</CustomTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map(row => (
             <TableRow className="row" key={row.id}>
               <CustomTableCell component="th" scope="row">
-                {row.name}
+                {row.itemid}
               </CustomTableCell>
-              <CustomTableCell align="right">{row.calories}</CustomTableCell>
-              <CustomTableCell align="right">{row.fat}</CustomTableCell>
-              <CustomTableCell align="right">{row.carbs}</CustomTableCell>
-              <CustomTableCell align="right">{row.protein}</CustomTableCell>
+              <CustomTableCell >{row.name}</CustomTableCell>
+              <CustomTableCell >{row.quantity}</CustomTableCell>
+              <CustomTableCell >{row.type}</CustomTableCell>
+              <CustomTableCell >{row.time}</CustomTableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
-    </Paper>
+    {/* </Paper> */}
+  </Card>
       </div>
+
+
     </div>
 )
 }
@@ -113,17 +131,17 @@ const styles = theme => ({
 });
 
 let id = 0;
-function createData(name, calories, fat, carbs, protein) {
+function createData(itemid, name, quantity, type, time) {
   id += 1;
-  return { id, name, calories, fat, carbs, protein };
+  return { id, itemid, name, quantity, type, time,  };
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('GGSKSIE', 'DELL INSPIRON', 6, 'LAPTOP', 4),
+  createData('KSJSOSK', 'ACER ASPIRE', 9, 'KEYBOARD', 4),
+  createData('EKSKWM9', 'APPLE MACBOOK_PRO',5, 'CHARGER', 6),
+  createData('HSJ3627', 'APPLE MACBOOK_AIR', 3, 'LAPTOP', 4),
+  createData('H27EH82', 'HP PAVILLION', 6, 'LAPTOP', 3),
 ];
 
 function CustomizedTable(props) {

@@ -7,20 +7,10 @@ import App from './App.css'
 export default class Logo extends React.Component{
   render(){
     return(
-      <Grid container>
-        <Grid item xs>
-          <div  >
-            <img src={logo}/>
-          </div>
-        </Grid>
-        <Grid item xs>
-          <div align="left">
-            Better
-
-          </div>
-        </Grid>
-
-      </Grid>
+      <div className="text-vertical-center" style={{color: "white"}} >
+        <img src={logo}/>
+        Better
+      </div>
     )
   }
 }

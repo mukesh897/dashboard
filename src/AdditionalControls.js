@@ -1,6 +1,10 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import logo from './assets/logo_mark.svg';
+import settings from './assets/settings.svg';
+import Button from '@material-ui/core/Button';
+import App from './App.css';
+
+
 
 
 export default class AdditionalControls extends React.Component{
@@ -8,28 +12,30 @@ export default class AdditionalControls extends React.Component{
     return(
 
 
-            <div>
-              <div>
-                <a href="http://www.google.com">
-              <img src={logo} /> Control1
-              </a>
-            </div>
-              <div
-                ><a href="http://www.google.com">
-                <img src={logo} /> Control2
-              </a>
-            </div>
-              <div>
-                <a href="http://www.google.com">
-                <img src={logo} /> Control3
-                </a>
-              </div>
-              <div>
-                <a href="http://www.google.com">
-                <img src = {logo} /> Control4
-                </a>
-              </div>
-            </div>
+      <div className="extra-top-bottom-padded" style={{color: "white"}}>
+          <div className="container" align="left">
+            <Button style={{color: "white"}} color="primary" variant="outlined">
+              <img src={settings} className="img-padded"/>
+              Settings
+            </Button>
+          </div>
+          <div className="container" align="left">
+            <Button style={{color: "white"}} color="primary" variant="outlined">
+              Feedback
+            </Button>
+        </div>
+          {/* <div className="container" align="left">
+            <Button style={{color: "white"}} color="primary" variant="outlined">
+              Buisness Principles
+            </Button>
+          </div> */}
+          <div className="container" align="left">
+            <Button style={{color: "white"}} color="primary" variant="outlined">
+              Suggestions
+          </Button>
+          </div>
+      </div>
+
 
 
     )
