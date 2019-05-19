@@ -72,19 +72,19 @@ export default class Info extends React.Component{
           <a href="/">Learn more</a></div>
         />
         <AppBar color="inherit" position="static">
-          <div align='right'>
+          {/* <div align='right'>
             <img src={share}></img>Share
             <img src = {download}></img>Save
-          </div>
+          </div> */}
         <Toolbar >
-          <img src={clock}></img>
+          <img className="img-padded" src={clock}></img>
           <Typography  color="inherit">
             19 May,2019
           </Typography>
+          <p style={{marginLeft: '300px'}}></p>
+          <Button color="inherited"><img className="img-padded" src={share}></img>Share</Button>
+          <Button color="inherited"><img className="img-padded" src ={download}></img>Save</Button>
 
-          <Typography style={{marginLeft: '370px'}}  color="inherit">
-
-          </Typography>
         </Toolbar >
 
       </AppBar>

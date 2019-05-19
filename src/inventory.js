@@ -50,7 +50,7 @@ export default class Inventory extends React.Component{
     return(
       <div >
       <div >
-        <h2 style={{color: "white"}}>Inventory overview</h2>
+        <h6 style={{color: "white"}}>Inventory overview</h6>
         <p style={{color: "white"}}>Get a bird's eye view of your inventory's activities</p>
       </div>
 

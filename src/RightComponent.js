@@ -13,7 +13,7 @@ import App from './App.css'
 export default class LeftComponent extends React.Component{
   render(){
     return(
-      <div>
+      <div className="top-padded right-padded">
         {/* <Help/> */}
         <Trends/>
         <Tickets/>
