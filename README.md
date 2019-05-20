@@ -3,7 +3,12 @@ This project was created as an assignment given by BetterPlace.
 ## Available Scripts
 
 In the project directory, you can run:
-npm install ( to install all the dependencies)
+### git clone git@github.com:mukesh897/dashboard.git
+Clones the repositry in your system
+
+### npm install 
+Installs all the dependencies
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
